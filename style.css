@@ -68,10 +68,13 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
-    background-color: var(--card-background);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transform: scale(0.95);
     animation: fadeInScale 0.5s ease-out forwards;
 }
@@ -121,7 +124,10 @@ p {
 }
 
 .links a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: 15px;
     background-color: var(--primary-color);
     color: var(--text-color);
