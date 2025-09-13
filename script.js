@@ -1,16 +1,17 @@
-window.addEventListener('load', () => {
+document.addEventListener("DOMContentLoaded", function() {
     const loader = document.getElementById('loader');
     const container = document.querySelector('.container');
 
-    // Hide loader and show content
-    setTimeout(() => {
+    // Wait for all fonts to be loaded
+    document.fonts.ready.then(function() {
+        // Hide loader and show content
         if (loader) {
             loader.style.display = 'none';
         }
         if (container) {
             container.style.display = 'block';
         }
-    }, 500); // Adjust delay as needed
+    });
 
     // Initialize Vanta.js animation
     VANTA.NET({
